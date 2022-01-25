@@ -1,0 +1,10 @@
+1. An eccentric chocolate factory owner has decided to conceal a limited number of special prizes, hidden under the wrapper, in his latest batch of chocolate bars.
+
+Perform a simulation of you purchasing three separate chocolate bars from a local store, sampling from the vector chocolate. The random seed has been set for you.
+
+purchases <- sample(chocolate, 3)
+
+the reason why :  1. no familiar with R  2. cannot translate the problem to the code
+
+
+2. 
