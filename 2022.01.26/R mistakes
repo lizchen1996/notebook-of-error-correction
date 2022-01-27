@@ -7,4 +7,24 @@ purchases <- sample(chocolate, 3)
 the reason why :  1. no familiar with R  2. cannot translate the problem to the code
 
 
-2. 
+2. Create a density plot of the ages (age) of all passengers aboard the titanic.
+library(ggplot2)
+ggplot(titanic, aes(age)) + geom_density()
+
+3. Below is a boxplot reflecting the the lap times for a sample of Formula 1 race cars (in seconds).
+What does the center white box tell you about the lap times?
+the reason why:  the ability of interpretation of charts is not good, I need to practice more( find more charts and analyze carefully
+
+4. What can a histogram tell you about a dataset?
+the distribution of a continous variable
+
+5. Based on past experience, you know that your website receives approximately 1500 visitors per hour.
+Simulate the number of visits per hour for the next six hours.
+
+set.seed(42)
+traffic <- rpois(6, 1500)
+
+6. You have access to a dataset with information about the weight and size of a tropical species of fish. 
+You want to test the hypothesis that one sub-species is heavier than another. Based on the boxplot below, 
+why might you not want to use a t-test?
+the data is not normally distributed.
