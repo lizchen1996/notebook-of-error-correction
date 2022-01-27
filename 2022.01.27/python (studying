@@ -1,0 +1,36 @@
+1. Python Data Types
+there's the float, to represent a real number
+and the int, to represent an integer. Next,
+we also have str, short for string, to represent text in Python
+and bool, which can be either True or False. You can save these values as a variable, like these examples show.
+
+2. Problem
+the infomation you met in life, such as height, phone-number, click..
+
+3. Python List
+3-1 lists can also contain lists themselves.
+3-2 A list is a way to give a single name to a collection of values. 
+These values, or elements, can have any type; they can be floats, integer, booleans, strings, 
+but also more advanced Python types, even lists. It's perfectly possible for a list to contain different types as well.
+
+4. List type
+列表里可以包含字符串和数字，先想一想格式，就连逗号都很重要
+
+5. Subsetting lists
+5-1 The first element in the list has index 0, the second element has index 1, and so on.
+5-2 You can also count backwards, using negative indexes. This is useful if you want to get some elements at the end of your list. 
+5-3 To get your dad's height, for example, you'll need the index -1. These are the negative indexes for all list elements.
+
+6. List slicing
+从0开始index，连字符串都算，一个一个的
+多多print，这样才能确保每一步都是正确取值
+
+7. Changing list elements
+可以用新元素直接覆盖
+
+8. delete elements
+注意取值范围，括号左闭右开
+
+
+
+
