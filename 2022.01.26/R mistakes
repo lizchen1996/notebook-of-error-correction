@@ -28,3 +28,42 @@ traffic <- rpois(6, 1500)
 You want to test the hypothesis that one sub-species is heavier than another. Based on the boxplot below, 
 why might you not want to use a t-test?
 the data is not normally distributed.
+
+7. A result is said to be statistically significant if:
+the outcome is unlikely to have occured due to chance
+the reason why :  not familar with statistics
+
+8. Which statement is NOT TRUE about test statistics?
+the sample mean and the population mean are examples of test statistics
+the reason why: need more caution
+
+9. Draw a sample of 100 numbers from a standard normal distribution. The random number generator has been seeded for you.
+Complete the code to return the output
+
+norm <- rnorm(100)
+norm[c(1,5:10)]
+
+Expected Output
+[1] -1.3850706  1.4255380  0.7444798  0.7002294 -0.2293546  0.1970939  1.2071538
+
+10. An eccentric chocolate factory owner has decided to conceal a limited number of special prizes, hidden under the wrapper,
+in his latest batch of chocolate bars.
+
+Perform a simulation of you purchasing three separate chocolate bars from a local store,
+sampling from the vector chocolate. The random seed has been set for you.
+
+Complete the code to return the output
+purchases <- sample(chocolate, 3)
+
+purchases
+Expected Output
+[1] "Lose" "Lose" "Win" 
+
+the reason why: not familar with R. (as you know,sometimes I need memorize the rule of R without explanations
+
+11. To get help on the max() function, for example, you can use one of these calls:
+
+help(max)
+?max
+
+
