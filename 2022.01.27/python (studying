@@ -31,6 +31,52 @@ but also more advanced Python types, even lists. It's perfectly possible for a l
 8. delete elements
 注意取值范围，括号左闭右开
 
+9. functions
+a function is a piece of reusable code, aimed at solving a particular task. 
+You can call functions instead of having to write code yourself. Maybe an example can clarify things here.
+take round() function for example,四舍五入，round(number, ndigits)
+一定要细心细心再细心，即便是括号，定义的名字，也是要严格遵守规范，和语法规则的
+
+10. upper method is not defined python
+
+11. # How much is your $100 worth after 7 years?
+print(100*1.1**7)
+
+12.类名.方法名，一些最基础的编程知识其实是通用的。（今天把有疑问的练习题汇总给TA
+
+13. install pakages
+http://pip.readthedocs.org/en/stable/installing/
+terminal: python3 get-pip.py
+
+14. import pakages:
+import numpy as np
+np.array([1,2,3])
+
+import numpy
+numpy.array([1,2,4])
+
+from numpy import array
+array([1,2,5])
+
+15. 
+# Import numpy
+import numpy as np
+
+# Calculate the BMI: bmi
+np_height_m = np.array(height_in) * 0.0254
+np_weight_kg = np.array(weight_lb) * 0.453592
+bmi = np_weight_kg / np_height_m ** 2
+
+
+# Create the light array
+light = bmi < 21
+print(bmi)
+# Print out light
+print(light)
+
+
+# Print out BMIs of all baseball players whose BMI is below 21
+print(bmi[light])
 
 
 
