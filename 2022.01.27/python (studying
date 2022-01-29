@@ -1,3 +1,6 @@
+all of this come from Datacamp
+https://app.datacamp.com/learn/assignments
+
 1. Python Data Types
 there's the float, to represent a real number
 and the int, to represent an integer. Next,
@@ -78,5 +81,61 @@ print(light)
 # Print out BMIs of all baseball players whose BMI is below 21
 print(bmi[light])
 
+16.
+In [1]:
+np.array([True, 1, 2]) + np.array([3, 4, False])
+Out[1]:
+array([4, 5, 2])
+In [2]:
+np.array([4, 3, 0]) + np.array([0, 2, 2])
+Out[2]:
+array([4, 5, 2])
+
+True was converted to 1
+False was converted to 0
+
+17. 
+# baseball is available as a regular list of lists
+
+# Import numpy package
+import numpy as np
+
+# Create np_baseball (2 cols)
+np_baseball = np.array(baseball)
+
+# Print out the 50th row of np_baseball
+print(np_baseball[49,:])
+
+# Select the entire second column of np_baseball: np_weight_lb
+np_weight_lb =np_baseball[:,1]
+
+
+# Print out height of 124th player
+print(np_baseball[123, 0])
+
+18. 注意list[] 和 () 的区别,同时注意 类名.方法名 的具体应用，还有 取值范围名[]  的应用
+# heights and positions are available as lists
+
+# Import numpy
+import numpy as np
+
+# Convert positions and heights to numpy arrays: np_positions, np_heights
+np_positions = np.array(positions)
+np_heights = np.array(heights)
+
+
+# Heights of the goalkeepers: gk_heights
+gk_heights = np_heights[np_positions == 'GK']
+
+# Heights of the other players: other_heights
+other_heights = np_heights[np_positions != 'GK']
+
+# Print out the median height of goalkeepers. Replace 'None'
+med_height_goalkeepers = np.median(gk_heights)
+print("Median height of goalkeepers: " + str(med_height_goalkeepers))
+
+# Print out the median height of other players. Replace 'None'
+med_height_other_players = np.median(other_heights)
+print("Median height of other players: " + str(med_height_other_players))
 
 
