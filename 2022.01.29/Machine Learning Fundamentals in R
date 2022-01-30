@@ -1,0 +1,138 @@
+1. The MedGPA dataset is loaded in this session. Fit a logistic regression model on the response variable Acceptance as a function of the feature variable GPA.
+Complete the code to return the output
+
+model <- glm(
+  formula = Acceptance ~ GPA,
+  data = MedGPA,
+  family = binomial,
+)
+
+coef(model)
+
+Expected Output
+(Intercept)         GPA 
+ -19.206503    5.454166 
+
+
+2.  Fit a random forest model to the train data, where the target variable is default and all other variables in the data are used as features.
+Complete the code to return the output
+library(randomForest)
+
+credit_model <- randomForest(default ~ ., data = train)
+credit_model$importance
+
+Expected Output
+                     MeanDecreaseGini
+checking_balance            32.928540
+months_loan_duration        36.902741
+credit_history              17.179767
+purpose                     14.866247
+amount                      49.884947
+savings_balance             13.866623
+employment_duration         16.543585
+
+
+3.  A college is looking at high-school exam scores to determine whether or not new students will pass their first year.
+
+What machine learning model is best suited for this problem?
+
+logistics regression
+
+
+4. The Big_Al dataset includes the dependent variable sales, which is the monthly revenue of Big Al's Burgers in thousands of dollars 
+and the independent variable advert, which is the advertising expenditure in a given month. Fit a simple linear regression model.
+
+Complete the code to return the output
+model <- lm(sales ~ advert, data=Big_Al)
+
+coef(model)
+Expected Output
+(Intercept)      advert 
+  74.179723    1.732616 
+
+
+5. You are supplied with two continuous variables saved as x and y as part of data frame dist.
+Fit a linear regression of y versus x.
+
+Complete the code to return the output
+model <- lm(y ~ x, data = dist)
+
+coef(model)
+Expected Output
+(Intercept)           x 
+  -1.440227    1.376069 
+
+
+6. Using the fitted random forest rf_model, predict default values for the test data.
+Complete the code to return the output
+library(randomForest)
+rf_model <- randomForest(formula = default ~ ., data = train)
+predicted_default <- predict(rf_model, test, type="response")
+
+head(predicted_default)
+Expected Output
+ 4  9 13 15 17 28 
+ 1  0  0  0  0  0 
+Levels: 0 1
+
+
+7. A new chef in town would like to predict the quality of red wines to help him prepare the wine menu.
+
+He has supplied you with a data frame wine that contains all descriptor variables 
+and a target variable quality on a scale from 1-10 as provided by a local wine critic.
+
+He has asked you to build an ensemble model that selects a random subset of features 
+and trains each sub-model consecutively to improve the results of the previous one.
+Use 60 estimators for the ensemble.
+
+Complete the code to return the output
+
+wine_model <- gbm(quality ~ ., data = wine, n.trees = 60) 
+
+summary(wine_model, plotit = FALSE)
+
+Expected Output
+Distribution not specified, assuming gaussian ...
+                                          var    rel.inf
+alcohol                               alcohol 46.6963629
+sulphates                           sulphates 23.6584847
+`volatile acidity`         `volatile acidity` 21.3039805
+chlorides                           chlorides  2.4742596
+`total sulfur dioxide` `total sulfur dioxide`  2.3388310
+pH                                         pH  1.8777662
+`fixed acidity`               `fixed acidity`  0.7687792
+density                               density  0.5615103
+`residual sugar`             `residual sugar`  0.3200257
+`citric acid`                   `citric acid`  0.0000000
+`free sulfur dioxide`   `free sulfur dioxide`  0.0000000
+
+
+8. What is the main difference between hierarchical clustering and k-means clustering?
+K-means clustering requires a pre-specified number of clusters, while hierachical clustering creates multiple clusters across of the data
+
+
+9. Which one of the following statements describes an unsupervised learning problem?
+A machine learning problem where we seek to understand whether observations fit into distinct groups based on their similarities.
+
+
+9. Fit a linear regression model to data consisting of a 200 observations of a 3 dependent (x1, x2, x3) 
+and a single response variable y. The data is stored in a data frame named df.
+
+'data.frame':    200 obs. of  4 variables:
+ $ y : num  115.7 -21 -60.7 -11.4 -150.3 ...
+ $ x1: num  27.44 28.11 8.58 24.91 19.25 ...
+ $ x2: num  26.55 15.51 25.56 13.28 4.74 ...
+ $ x3: num  0.681 15.397 18.922 12.563 26.378 ...
+Complete the code to return the output
+
+model <- lm(y ~ x1 + x2 + x3, data = df)
+
+coef(model)
+Expected Output
+(Intercept)          x1          x2          x3 
+  0.1767412   1.8839881   2.5932838  -7.5483118 
+  
+
+10.  
+  
+
