@@ -10,3 +10,10 @@ print(homelessness.info())
 print(homelessness.shape)
 
 Remember that.shape is an attribute, not a function.
+
+
+2. 选取的行数要和 [] 对数一致
+# From high_homelessness_srt, select the state and indiv_per_10k cols
+result = high_homelessness_srt[["state","indiv_per_10k"]]
+
+3. 
